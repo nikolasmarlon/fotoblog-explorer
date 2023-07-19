@@ -52,6 +52,8 @@ main{
 }
 
 
+
+
 header, nav, nav ul{
     display: flex;
     align-items: center;
@@ -130,6 +132,9 @@ main h1{
     background-color: var(--white);
     border-radius: .8rem;
     
+    /* Para retirar o gap entre a imagem e o figcaption*/
+    display: flex;
+    flex-direction: column;
 
     /*Imagem e o conteúdo dentro do item estão transbordando, por isso usamos o overflow: hidden*/
     overflow: hidden;
@@ -142,10 +147,26 @@ main h1{
     aspect-ratio: 16/9;
     /*Imagem ajustada*/
     object-fit: cover;
+
+    transition: .3s;
+
+    
+    
+}
+
+.item img:hover{
+    filter: hue-rotate(10deg) contrast(101%) saturate(200%);
+    transform: scale(1.1);
 }
 
 .detalhes {
     padding: 2.2rem;
+    
+    z-index: 1;
+    
+    position: relative;
+
+    
 }
 
 .detalhes h2{
@@ -164,6 +185,10 @@ main h1{
     font-size: 1.2rem;
     text-transform: uppercase;
 }
+
+
+
+
 
 
 
