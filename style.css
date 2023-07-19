@@ -13,8 +13,14 @@
     --white: #fff;
     --gray-100: #f5f5f5;
     --gray-300: #8d8d99;
+    --gray-500: #3d3d3d;
     --gray-900: #202024;
 
+
+    
+}
+
+html, body, input{
     font-family: 'Mulish', sans-serif;
 }
 
@@ -43,4 +49,69 @@ main{
     background-color: rgb(221, 221, 250);
     overflow-y: scroll;
     background-color: var(--gray-100);
+}
+
+
+header, nav, nav ul{
+    display: flex;
+    align-items: center;
+    gap: 7.2rem;
+    font-weight: 700;
+}
+
+
+header form {
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    font-size: 1.8rem;
+    color: var(--gray-300);
+}
+
+ul li.active {
+    color: var(--gray-900);
+}
+
+
+/* Para esconder a label */
+.input-container label{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.input-container input{
+    width: 100%;
+    padding: 1.6rem;
+    background-color: var(--gray-100);
+    border: 0;
+    border-radius: .6rem;
+
+
+    font-size: 1.6rem;
+    font-weight: 600;
+    opacity: 0.56;
+}
+
+.input-container input::placeholder{
+    color: var(--gray-500);
+}
+
+.avatar {
+    width: 4.2rem;
+    height: 4.2rem;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+
+footer p{
+    text-align: center;
+    padding: 1.6rem;
+    font-weight: 600;
 }
