@@ -128,7 +128,19 @@ main h1{
 
 .item img {
     width: 100%;
+
+    /*Proporção da imagem*/
+    aspect-ratio: 16/9;
+    /*Imagem ajustada*/
+    object-fit: cover;
 }
+
+
+
+
+
+
+
 
 footer p{
     text-align: center;
