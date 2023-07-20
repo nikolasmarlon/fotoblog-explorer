@@ -184,6 +184,27 @@ main h1{
 }
 
 
+/*Criando animação
+
+1ª maneira
+Obs: para fazer a animação ir e voltar: podemos atribuir 50% no final
+@keyframes rotate-center{0%{transform:rotate(0)}50%{transform:rotate(360deg)}}
+
+
+2ª maneiria
+
+adicionar animation-direction: alternate;
+adicionar animation-iteraction-count: 2;
+
+assim como existe mais de uma animação, a segunda pega a propriedade alternate, fazendo com que a animação volte para a posição inicial.
+
+*/
+@keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+
+
+/*Chamando a animação: chanando pelo nome, adicionando um tempo*/
+.rotate-center{animation:rotate-center .9s ease-in-out both alternate infinite}
+
 
 
 
