@@ -203,7 +203,7 @@ assim como existe mais de uma animação, a segunda pega a propriedade alternate
 
 
 /*Chamando a animação: chanando pelo nome, adicionando um tempo*/
-.rotate-center{animation:rotate-center .9s ease-in-out both alternate infinite 3s}
+.rotate-center{animation:rotate-center .9s ease-in-out both}
 
 
 
