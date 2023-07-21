@@ -199,11 +199,17 @@ adicionar animation-iteraction-count: 2;
 assim como existe mais de uma animação, a segunda pega a propriedade alternate, fazendo com que a animação volte para a posição inicial.
 
 */
-@keyframes rotate-center{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+@keyframes rotate-center{ 
+    0%{
+        transform:rotate(0)
+    }
+    100%{
+        transform:rotate(360deg)
+    }}
 
 
 /*Chamando a animação: chanando pelo nome, adicionando um tempo*/
-.rotate-center{animation:rotate-center .9s ease-in-out both}
+.rotate-center{animation:rotate-center .9s ease-in-out both .4s}
 
 
 
@@ -214,4 +220,42 @@ footer p{
     text-align: center;
     padding: 1.6rem;
     font-weight: 600;
+}
+
+
+header {
+    --startY: -100%;
+    animation: mover .9s;
+}
+
+footer {
+    --startY: 100%;
+    animation: mover .9s ;
+}
+
+@keyframes mover {
+    from {
+        transform: translateY(var(--startY));
+    }
+}
+
+
+
+.item {
+
+    --dalay: .4s;
+    animation: aparecer .7s var(--dalay) backwards;
+}
+
+
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
 }
